@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12120"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NibVC">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="OqD-9Y-EmC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dt5-ux-bkD" customClass="NibView">
+                    <rect key="frame" x="0.0" y="64" width="150" height="267"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OWK-Fa-nzR" customClass="CodeView">
+                    <rect key="frame" x="225" y="64" width="150" height="267"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="OWK-Fa-nzR" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.4" id="3Fd-wn-LQX"/>
+                <constraint firstItem="dt5-ux-bkD" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.4" id="BdI-0X-mLb"/>
+                <constraint firstItem="OWK-Fa-nzR" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.4" id="BrG-Oi-s3k"/>
+                <constraint firstItem="OWK-Fa-nzR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="CGl-T9-BpJ"/>
+                <constraint firstItem="dt5-ux-bkD" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.4" id="Rn4-ea-RL2"/>
+                <constraint firstItem="dt5-ux-bkD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="TmD-CE-Guj"/>
+                <constraint firstItem="dt5-ux-bkD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="jDH-Id-QZ7"/>
+                <constraint firstAttribute="trailing" secondItem="OWK-Fa-nzR" secondAttribute="trailing" id="l4h-er-qYw"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="32.5" y="87.5"/>
+        </view>
+    </objects>
+</document>
