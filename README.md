@@ -1,3 +1,5 @@
+# 如何在代码和xib中使用一个xib的view
+
 vc view
 nib nib √
 nib code √
