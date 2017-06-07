@@ -47,12 +47,12 @@
     }
 }
 
-- (UIView *)contentView {
+- (UIView *)x_contentView {
     return objc_getAssociatedObject(self, _cmd);
 }
 
-- (void)setContentView:(UIView *)contentView {
-    objc_setAssociatedObject(self, @selector(contentView), contentView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setX_contentView:(UIView *)contentView {
+    objc_setAssociatedObject(self, @selector(x_contentView), contentView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (void)x_setupView {
@@ -62,43 +62,43 @@
              ([NSString stringWithFormat:@"没有找到%@.xib文件", className]));
     
     // 加载nib文件，并对view赋值。
-    self.contentView = [[[NSBundle mainBundle] loadNibNamed:className owner:self options:nil] firstObject];;
+    self.x_contentView = [[[NSBundle mainBundle] loadNibNamed:className owner:self options:nil] firstObject];;
     
     // 模仿ViewController中view的设置。
-    NSAssert(self.contentView, @"File's Owner没有设置");
+    NSAssert(self.x_contentView, @"File's Owner没有设置");
     
-    [self addSubview:self.contentView];
+    [self addSubview:self.x_contentView];
     
     // 填充整个view
-    self.contentView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.contentView.superview addConstraint:[NSLayoutConstraint constraintWithItem:self.contentView
-                                                                           attribute:NSLayoutAttributeTop
-                                                                           relatedBy:NSLayoutRelationEqual
-                                                                              toItem:self.contentView.superview
-                                                                           attribute:NSLayoutAttributeTop
-                                                                          multiplier:1
-                                                                            constant:0]];
-    [self.contentView.superview addConstraint:[NSLayoutConstraint constraintWithItem:self.contentView
-                                                                           attribute:NSLayoutAttributeLeft
-                                                                           relatedBy:NSLayoutRelationEqual
-                                                                              toItem:self.contentView.superview
-                                                                           attribute:NSLayoutAttributeLeft
-                                                                          multiplier:1
-                                                                            constant:0]];
-    [self.contentView.superview addConstraint:[NSLayoutConstraint constraintWithItem:self.contentView
-                                                                           attribute:NSLayoutAttributeRight
-                                                                           relatedBy:NSLayoutRelationEqual
-                                                                              toItem:self.contentView.superview
-                                                                           attribute:NSLayoutAttributeRight
-                                                                          multiplier:1
-                                                                            constant:0]];
-    [self.contentView.superview addConstraint:[NSLayoutConstraint constraintWithItem:self.contentView
-                                                                           attribute:NSLayoutAttributeBottom
-                                                                           relatedBy:NSLayoutRelationEqual
-                                                                              toItem:self.contentView.superview
-                                                                           attribute:NSLayoutAttributeBottom
-                                                                          multiplier:1
-                                                                            constant:0]];
+    self.x_contentView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.x_contentView.superview addConstraint:[NSLayoutConstraint constraintWithItem:self.x_contentView
+                                                                             attribute:NSLayoutAttributeTop
+                                                                             relatedBy:NSLayoutRelationEqual
+                                                                                toItem:self.x_contentView.superview
+                                                                             attribute:NSLayoutAttributeTop
+                                                                            multiplier:1
+                                                                              constant:0]];
+    [self.x_contentView.superview addConstraint:[NSLayoutConstraint constraintWithItem:self.x_contentView
+                                                                             attribute:NSLayoutAttributeLeft
+                                                                             relatedBy:NSLayoutRelationEqual
+                                                                                toItem:self.x_contentView.superview
+                                                                             attribute:NSLayoutAttributeLeft
+                                                                            multiplier:1
+                                                                              constant:0]];
+    [self.x_contentView.superview addConstraint:[NSLayoutConstraint constraintWithItem:self.x_contentView
+                                                                             attribute:NSLayoutAttributeRight
+                                                                             relatedBy:NSLayoutRelationEqual
+                                                                                toItem:self.x_contentView.superview
+                                                                             attribute:NSLayoutAttributeRight
+                                                                            multiplier:1
+                                                                              constant:0]];
+    [self.x_contentView.superview addConstraint:[NSLayoutConstraint constraintWithItem:self.x_contentView
+                                                                             attribute:NSLayoutAttributeBottom
+                                                                             relatedBy:NSLayoutRelationEqual
+                                                                                toItem:self.x_contentView.superview
+                                                                             attribute:NSLayoutAttributeBottom
+                                                                            multiplier:1
+                                                                              constant:0]];
 }
 
 @end

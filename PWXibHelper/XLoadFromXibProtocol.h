@@ -18,6 +18,6 @@
 @interface UIView (XLoadFromXibProtocol)
 
 /// Xib的containerView
-@property (nonatomic, strong) UIView *contentView;
+@property (nonatomic, strong) UIView *x_contentView;
 
 @end
